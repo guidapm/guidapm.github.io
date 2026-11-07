@@ -11,22 +11,26 @@ button{font:inherit;font-weight:800;border-radius:14px;padding:12px 16px;border:
 #home .p{width:min(320px,100%);font-size:19px;padding:15px}.how{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:12px 14px;text-align:left;max-width:420px;font-size:14.5px;color:var(--soft);font-weight:600}.how b{color:var(--ink)}
 #err{color:var(--bad);font-weight:800;min-height:22px;margin:0}#inst{display:none}
 #drive{position:fixed;inset:0;display:none;touch-action:none;user-select:none;-webkit-user-select:none}
-.ped{position:absolute;top:0;bottom:0;width:38%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;font-weight:900;font-size:22px;letter-spacing:1px;border:0;border-radius:0;transition:filter .08s,transform .08s}
+.ped{position:absolute;top:0;bottom:0;width:var(--pw);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;font-weight:900;font-size:22px;letter-spacing:1px;border:0;border-radius:0;transition:filter .08s,transform .08s}
 #brk{left:0;background:linear-gradient(90deg,#3a0c12,#5b1220);color:#ffd2d7;padding-left:env(safe-area-inset-left)}#gas{right:0;background:linear-gradient(270deg,#073a1d,#0d5a2e);color:#d6ffe6;padding-right:env(safe-area-inset-right)}
-.ped i{font-style:normal;font-size:54px;line-height:1}.ped.on{filter:brightness(1.6)}.ped.on i{transform:scale(.9)}
+.ped i{font-style:normal;font-size:var(--pi);line-height:1}.ped.on{filter:brightness(1.6)}.ped.on i{transform:scale(.9)}
 #mid{position:absolute;left:38%;right:38%;top:0;bottom:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;pointer-events:none}
 #wh{width:min(26vw,170px);height:min(26vw,170px);transition:transform .05s linear}#spd{font:900 40px/1 ui-monospace,monospace}#spd small{font-size:13px;color:var(--soft);display:block;text-align:center;font-family:system-ui}
 #stt{font-size:13px;font-weight:800;color:var(--soft);text-align:center;padding:0 6px}#stt.ok{color:var(--acc)}#stt.no{color:var(--gold)}
 #bar{position:absolute;top:max(8px,env(safe-area-inset-top));left:50%;transform:translateX(-50%);display:flex;gap:6px;pointer-events:auto;z-index:3}#bar button{padding:7px 11px;font-size:14px;border-radius:12px;background:rgba(13,26,19,.85)}
 body.wm .ped{top:auto;bottom:max(14px,env(safe-area-inset-bottom));border-radius:18px;font-size:15px;gap:4px;padding:0!important;box-shadow:0 6px 0 rgba(0,0,0,.45)}
-body.wm .ped i{font-size:34px}body.wm .ped small{display:none}
-body.wm #brk{left:max(16px,env(safe-area-inset-left))!important;right:auto!important;width:min(19vw,150px);height:min(34vh,140px)}
-body.wm #gas{left:calc(max(16px,env(safe-area-inset-left)) + min(19vw,150px) + 14px)!important;right:auto!important;width:min(15vw,118px);height:min(58vh,240px)}
+body.wm .ped i{font-size:var(--wi)}body.wm .ped small{display:none}
+body{--bw:min(19vw,150px);--bh:min(34vh,140px);--gw:min(15vw,118px);--gh:min(58vh,240px);--ww:min(42vw,78vh);--pw:38%;--pi:54px;--wi:34px}
+body.sz1{--bw:min(14vw,112px);--bh:min(26vh,106px);--gw:min(11vw,88px);--gh:min(44vh,182px);--ww:min(32vw,60vh);--pw:26%;--pi:40px;--wi:26px}
+body.sz2{--bw:min(10vw,80px);--bh:min(19vh,78px);--gw:min(8vw,64px);--gh:min(32vh,132px);--ww:min(23vw,44vh);--pw:17%;--pi:28px;--wi:20px}
+body.sz1 .ped,body.sz2 .ped{font-size:13px}body.sz1 #gear button{width:44px;height:38px;font-size:17px}body.sz2 #gear button{width:36px;height:32px;font-size:14px}body.sz2 #bar button{padding:5px 8px;font-size:12px}body.sz2 .ped{font-size:10px}body.sz2 .ped small{display:none}body.sz2 #spd{font-size:28px}body.sz2 #wh{width:min(12vw,64px)!important;height:min(12vw,64px)!important}
+body.wm #brk{left:max(16px,env(safe-area-inset-left))!important;right:auto!important;width:var(--bw);height:var(--bh)}
+body.wm #gas{left:calc(max(16px,env(safe-area-inset-left)) + var(--bw) + 14px)!important;right:auto!important;width:var(--gw);height:var(--gh)}
 body.wm .ped.on{transform:translateY(5px);box-shadow:0 1px 0 rgba(0,0,0,.45)}
 body.wm #mid{left:38%;right:38%;justify-content:flex-end;padding-bottom:max(18px,env(safe-area-inset-bottom))}body.wm #wh{width:min(16vw,90px);height:min(16vw,90px)}
-#whl{position:absolute;display:none;right:max(14px,env(safe-area-inset-right));bottom:max(10px,env(safe-area-inset-bottom));width:min(42vw,78vh);height:min(42vw,78vh);touch-action:none;cursor:grab}
+#whl{position:absolute;display:none;right:max(14px,env(safe-area-inset-right));bottom:max(10px,env(safe-area-inset-bottom));width:var(--ww);height:var(--ww);touch-action:none;cursor:grab}
 body.wm #whl{display:block}#whl svg{width:100%;height:100%;transition:transform .02s}#whl.back svg{transition:transform .25s ease-out}
-#gear{position:absolute;display:none;right:calc(max(14px,env(safe-area-inset-right)) + min(42vw,78vh) - 40px);top:max(54px,calc(env(safe-area-inset-top) + 46px));flex-direction:column;gap:6px}
+#gear{position:absolute;display:none;right:calc(max(14px,env(safe-area-inset-right)) + var(--ww) - 40px);bottom:calc(max(10px,env(safe-area-inset-bottom)) + var(--ww)*.72);flex-direction:column;gap:6px}
 body.wm #gear{display:flex}#gear button{width:52px;height:46px;padding:0;font:900 20px ui-monospace,monospace;border-radius:12px;color:var(--soft)}#gear button.on{background:var(--acc);color:#1a0d00;border-color:var(--acc)}
 #bgv{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:none;background:#000}body.bgg #bgv{display:block}
 body.bgg #brk{background:rgba(91,18,32,.72)}body.bgg #gas{background:rgba(13,90,46,.72)}body.bgg:not(.wm) #brk,body.bgg:not(.wm) #gas{background:rgba(0,0,0,.18);border:3px solid rgba(255,255,255,.25)}
@@ -60,6 +64,7 @@ body.bgg #mid{text-shadow:0 2px 6px #000}body.bgg #stt{background:rgba(0,0,0,.45
  <small>Come sterzi</small><div class="seg" data-o="modo"><button data-v="1">🎡 Volante sullo schermo</button><button data-v="0">📱 Muovi il telefono</button></div>
  <small>Quanto devi girare il telefono per sterzare tutto (se muovi il telefono)</small><div class="seg" data-o="giro"><button data-v="25">Poco</button><button data-v="40">Normale</button><button data-v="60">Tanto</button></div>
  <small>Se la macchina gira dalla parte sbagliata</small><div class="seg" data-o="inv"><button data-v="0">Normale</button><button data-v="1">Al contrario</button></div>
+ <small>Grandezza dei comandi (più piccoli = vedi meglio il gioco)</small><div class="seg" data-o="dim"><button data-v="0">Grandi</button><button data-v="1">Medi</button><button data-v="2">Piccoli</button></div>
  <small>Sfondo</small><div class="seg" data-o="sfondo"><button data-v="0">⬛ Nero</button><button data-v="1">🎮 Il gioco del computer</button></div>
  <small>Vibrazione quando premi i pedali</small><div class="seg" data-o="vib"><button data-v="1">Sì</button><button data-v="0">No</button></div>
  <small>Pedali</small><div class="seg" data-o="scambia"><button data-v="0">Freno a sinistra</button><button data-v="1">Freno a destra</button></div>
@@ -69,7 +74,7 @@ body.bgg #mid{text-shadow:0 2px 6px #000}body.bgg #stt{background:rgba(0,0,0,.45
 <script>
 if('serviceWorker' in navigator)navigator.serviceWorker.register('sw.js',{scope:'./'}).catch(()=>{});
 const $=s=>document.querySelector(s),LS=(k,v)=>{try{if(v===undefined)return localStorage.getItem(k);localStorage.setItem(k,v)}catch(e){return null}};
-const O=Object.assign({giro:40,inv:0,vib:1,scambia:0,modo:1,sfondo:0},(()=>{try{return JSON.parse(LS('gd_opt')||'{}')}catch(e){return {}}})());
+const O=Object.assign({giro:40,inv:0,vib:1,scambia:0,modo:1,sfondo:0,dim:0},(()=>{try{return JSON.parse(LS('gd_opt')||'{}')}catch(e){return {}}})());
 const st={peer:null,conn:null,on:false,want:false,code:'',s:0,g:0,b:0,a0:null,ang:null,last:0,fb:0};
 const APP=(()=>{try{if(new URLSearchParams(location.search).has('app'))sessionStorage.setItem('gd_app','1');return sessionStorage.getItem('gd_app')==='1'}catch(e){return false}})();let IE=null;addEventListener('beforeinstallprompt',e=>{IE=e;$('#inst').style.display='block';ibShow()});
 function ibShow(){if(APP||$('#ib9')||sessionStorage.getItem('gd_ibx'))return;const d=document.createElement('div');d.id='ib9';d.innerHTML='<img src="icona-192.png" alt=""><span><b>Installa l\'app Guida PM</b><small>Il volante sempre sul telefono</small></span><button class="p" data-i="ok">📲 Installa</button><button data-i="x" aria-label="Chiudi">✕</button>';document.body.appendChild(d);
@@ -92,7 +97,7 @@ $('#ctr').onclick=()=>{st.a0=st.ang;vib(30)};
 function ped(el,k){const P=new Set();const up=()=>{st[k]=P.size?1:0;el.classList.toggle('on',!!P.size)};
   el.addEventListener('pointerdown',e=>{e.preventDefault();try{el.setPointerCapture(e.pointerId)}catch(x){}P.add(e.pointerId);if(P.size===1)vib(18);up();send()});
   ['pointerup','pointercancel','lostpointercapture'].forEach(t=>el.addEventListener(t,e=>{P.delete(e.pointerId);up();send()}));el.addEventListener('contextmenu',e=>e.preventDefault())}
-function pedSide(){document.body.classList.toggle('bgg',!!+O.sfondo);if(!+O.sfondo){const v=$('#bgv');v.srcObject=null}document.body.classList.toggle('wm',!!+O.modo);if(+O.modo){$('#brk').style.left=$('#brk').style.right=$('#gas').style.left=$('#gas').style.right='';$('#ctr').style.display='none';return}$('#ctr').style.display='';const sw=+O.scambia;$('#brk').style.left=sw?'auto':'0';$('#brk').style.right=sw?'0':'auto';$('#gas').style.right=sw?'auto':'0';$('#gas').style.left=sw?'0':'auto'}
+function pedSide(){document.body.classList.toggle('sz1',+O.dim===1);document.body.classList.toggle('sz2',+O.dim===2);document.body.classList.toggle('bgg',!!+O.sfondo);if(!+O.sfondo){const v=$('#bgv');v.srcObject=null}document.body.classList.toggle('wm',!!+O.modo);if(+O.modo){$('#brk').style.left=$('#brk').style.right=$('#gas').style.left=$('#gas').style.right='';$('#ctr').style.display='none';return}$('#ctr').style.display='';const sw=+O.scambia;$('#brk').style.left=sw?'auto':'0';$('#brk').style.right=sw?'0':'auto';$('#gas').style.right=sw?'auto':'0';$('#gas').style.left=sw?'0':'auto'}
 ped($('#gas'),'g');ped($('#brk'),'b');pedSide();
 // ---- volante sullo schermo: lo giri col dito, quando lo lasci torna dritto
 {const W=$('#whl'),sv=W.querySelector('svg');let pid=null,a0=0,r0=0,rot=0;const MAX=135;
